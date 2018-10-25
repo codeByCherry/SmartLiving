@@ -4,12 +4,13 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--设备-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartLiving" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,22 +18,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-background" translatesAutoresizingMaskIntoConstraints="NO" id="3sJ-VA-ouJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-background" translatesAutoresizingMaskIntoConstraints="NO" id="3sJ-VA-ouJ" userLabel="home_background">
                                 <rect key="frame" x="0.0" y="64" width="375" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3sJ-VA-ouJ" secondAttribute="height" multiplier="75:44" id="vF3-Cq-NSb"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEG-CK-5B9" userLabel="info_containerView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="220"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16K-9f-f2q" userLabel="dumy_view">
+                                        <rect key="frame" x="182.5" y="0.0" width="10" height="176"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="Eh7-BI-kdi"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="address_icon" translatesAutoresizingMaskIntoConstraints="NO" id="nR1-0U-D7w" userLabel="location_icon">
+                                        <rect key="frame" x="137.5" y="17.5" width="14" height="18"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="深圳 宝安区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nq-bL-yep" userLabel="location">
+                                        <rect key="frame" x="159.5" y="16" width="80" height="21"/>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oq4-YG-RzU" userLabel="bottom_container">
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <color key="backgroundColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="0.40999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="God-97-gCq"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="O6K-bj-dre" userLabel="weather_icon">
+                                        <rect key="frame" x="152" y="50" width="71" height="59"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="16K-9f-f2q" firstAttribute="centerX" secondItem="hEG-CK-5B9" secondAttribute="centerX" id="BU5-br-vAF"/>
+                                    <constraint firstAttribute="bottom" secondItem="oq4-YG-RzU" secondAttribute="bottom" id="Fl1-6S-LEj"/>
+                                    <constraint firstItem="1Nq-bL-yep" firstAttribute="leading" secondItem="nR1-0U-D7w" secondAttribute="trailing" constant="8" id="Lxi-CF-9Aa"/>
+                                    <constraint firstAttribute="trailing" secondItem="oq4-YG-RzU" secondAttribute="trailing" id="RU4-Pi-rne"/>
+                                    <constraint firstItem="O6K-bj-dre" firstAttribute="top" secondItem="1Nq-bL-yep" secondAttribute="bottom" constant="13" id="SSH-CJ-b3b"/>
+                                    <constraint firstItem="oq4-YG-RzU" firstAttribute="leading" secondItem="hEG-CK-5B9" secondAttribute="leading" id="Uxc-ff-Vw7"/>
+                                    <constraint firstItem="1Nq-bL-yep" firstAttribute="centerX" secondItem="16K-9f-f2q" secondAttribute="centerX" constant="12" id="X7R-Er-McD"/>
+                                    <constraint firstItem="1Nq-bL-yep" firstAttribute="top" secondItem="hEG-CK-5B9" secondAttribute="top" constant="16" id="b3u-Fp-WFL"/>
+                                    <constraint firstItem="nR1-0U-D7w" firstAttribute="centerY" secondItem="1Nq-bL-yep" secondAttribute="centerY" id="bJA-5c-zIZ"/>
+                                    <constraint firstItem="16K-9f-f2q" firstAttribute="top" secondItem="hEG-CK-5B9" secondAttribute="top" id="e5U-ub-MRj"/>
+                                    <constraint firstItem="oq4-YG-RzU" firstAttribute="top" secondItem="16K-9f-f2q" secondAttribute="bottom" id="fBo-la-GvP"/>
+                                    <constraint firstItem="O6K-bj-dre" firstAttribute="centerX" secondItem="16K-9f-f2q" secondAttribute="centerX" id="hhc-zJ-wOZ"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4KS-jC-UMr">
+                                <rect key="frame" x="0.0" y="294" width="375" height="324"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3sJ-VA-ouJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4gI-0F-hPT"/>
+                            <constraint firstItem="4KS-jC-UMr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B5P-7X-YDg"/>
                             <constraint firstItem="3sJ-VA-ouJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HZA-dR-e8A"/>
+                            <constraint firstItem="hEG-CK-5B9" firstAttribute="centerY" secondItem="3sJ-VA-ouJ" secondAttribute="centerY" id="LBo-mZ-MdI"/>
+                            <constraint firstItem="hEG-CK-5B9" firstAttribute="height" secondItem="3sJ-VA-ouJ" secondAttribute="height" id="MKh-nE-ggt"/>
+                            <constraint firstItem="4KS-jC-UMr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MYy-2c-Gou"/>
+                            <constraint firstItem="hEG-CK-5B9" firstAttribute="width" secondItem="3sJ-VA-ouJ" secondAttribute="width" id="RcL-zm-lhM"/>
+                            <constraint firstItem="4KS-jC-UMr" firstAttribute="top" secondItem="3sJ-VA-ouJ" secondAttribute="bottom" constant="10" id="Sdf-44-ZT1"/>
+                            <constraint firstItem="hEG-CK-5B9" firstAttribute="centerX" secondItem="3sJ-VA-ouJ" secondAttribute="centerX" id="Ter-4W-bc7"/>
                             <constraint firstItem="3sJ-VA-ouJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vNl-cP-vhS"/>
+                            <constraint firstItem="4KS-jC-UMr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="x6G-Ub-wMS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="825-vP-PtK"/>
+                    <navigationItem key="navigationItem" title="设备" id="825-vP-PtK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,6 +175,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="address_icon" width="14" height="18"/>
         <image name="home-background" width="375" height="220"/>
+        <image name="weather_cloudy" width="71" height="59"/>
     </resources>
 </document>
