@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		1B528739217F151B00A6C7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B528738217F151B00A6C7CD /* AppDelegate.swift */; };
-		1B52873B217F151B00A6C7CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52873A217F151B00A6C7CD /* ViewController.swift */; };
 		1B52873E217F151B00A6C7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B52873C217F151B00A6C7CD /* Main.storyboard */; };
 		1B528740217F151B00A6C7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B52873F217F151B00A6C7CD /* Assets.xcassets */; };
 		1B528743217F151B00A6C7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B528741217F151B00A6C7CD /* LaunchScreen.storyboard */; };
 		1B52876E2181A42D00A6C7CD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52876D2181A42D00A6C7CD /* HomeViewController.swift */; };
 		1B5287702181A45B00A6C7CD /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52876F2181A45B00A6C7CD /* DeviceModel.swift */; };
+		1B5287752181A7C800A6C7CD /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5287742181A7C800A6C7CD /* DeviceCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B528735217F151B00A6C7CD /* SmartLiving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartLiving.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B528738217F151B00A6C7CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1B52873A217F151B00A6C7CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B52873D217F151B00A6C7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B52873F217F151B00A6C7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B528742217F151B00A6C7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B528744217F151B00A6C7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B52876D2181A42D00A6C7CD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1B52876F2181A45B00A6C7CD /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		1B5287742181A7C800A6C7CD /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				1B528738217F151B00A6C7CD /* AppDelegate.swift */,
-				1B52873A217F151B00A6C7CD /* ViewController.swift */,
 				1B5287722181A52500A6C7CD /* Home */,
 				1B52874A217F154500A6C7CD /* ImagesAndManBoard */,
 				1B528744217F151B00A6C7CD /* Info.plist */,
@@ -96,10 +95,19 @@
 		1B5287722181A52500A6C7CD /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1B5287732181A78800A6C7CD /* View */,
 				1B52876C2181A3AA00A6C7CD /* Model */,
 				1B52874B217F154D00A6C7CD /* Control */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		1B5287732181A78800A6C7CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B5287742181A7C800A6C7CD /* DeviceCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,10 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B52873B217F151B00A6C7CD /* ViewController.swift in Sources */,
 				1B5287702181A45B00A6C7CD /* DeviceModel.swift in Sources */,
 				1B528739217F151B00A6C7CD /* AppDelegate.swift in Sources */,
 				1B52876E2181A42D00A6C7CD /* HomeViewController.swift in Sources */,
+				1B5287752181A7C800A6C7CD /* DeviceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
