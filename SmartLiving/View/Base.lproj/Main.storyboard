@@ -13,7 +13,7 @@
         <!--设备-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartLiving" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SmartLiving" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,47 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4KS-jC-UMr">
                                 <rect key="frame" x="0.0" y="294" width="375" height="324"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="102" id="maJ-dX-shs">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="102"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="maJ-dX-shs" id="CV8-tw-rjJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="device_camera" translatesAutoresizingMaskIntoConstraints="NO" id="Hbu-gs-D84">
+                                                    <rect key="frame" x="15" y="11" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="Yjs-yV-ZRW"/>
+                                                        <constraint firstAttribute="height" constant="80" id="sQ0-ri-qFA"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络收音机" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k02-bZ-ioH">
+                                                    <rect key="frame" x="100" y="29" width="85" height="24"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
+                                                    <color key="textColor" red="0.45098039215686275" green="0.38823529411764707" blue="0.42745098039215684" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAy-99-MJW">
+                                                    <rect key="frame" x="100" y="54.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pAy-99-MJW" secondAttribute="trailing" priority="100" constant="233" id="9Md-Za-Fzk"/>
+                                                <constraint firstItem="Hbu-gs-D84" firstAttribute="leading" secondItem="CV8-tw-rjJ" secondAttribute="leadingMargin" id="A1H-5p-Kz9"/>
+                                                <constraint firstAttribute="trailing" secondItem="k02-bZ-ioH" secondAttribute="trailing" priority="100" constant="190" id="BwN-1R-odz"/>
+                                                <constraint firstItem="Hbu-gs-D84" firstAttribute="centerY" secondItem="CV8-tw-rjJ" secondAttribute="centerY" id="F3l-Ke-o2t"/>
+                                                <constraint firstItem="pAy-99-MJW" firstAttribute="top" secondItem="k02-bZ-ioH" secondAttribute="bottom" constant="1.5" id="MSE-m3-wfh"/>
+                                                <constraint firstItem="pAy-99-MJW" firstAttribute="leading" secondItem="k02-bZ-ioH" secondAttribute="leading" id="O1E-SU-BWu"/>
+                                                <constraint firstItem="k02-bZ-ioH" firstAttribute="leading" secondItem="Hbu-gs-D84" secondAttribute="trailing" constant="5" id="b4I-IF-de8"/>
+                                                <constraint firstItem="k02-bZ-ioH" firstAttribute="baseline" secondItem="Hbu-gs-D84" secondAttribute="centerY" constant="-4" id="fgX-Ep-YRj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEG-CK-5B9" userLabel="info_containerView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="220"/>
@@ -54,6 +95,33 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="深圳 宝安区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nq-bL-yep" userLabel="location">
                                         <rect key="frame" x="159.5" y="16" width="80" height="21"/>
                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="O6K-bj-dre" userLabel="weather_icon">
+                                        <rect key="frame" x="152" y="50" width="71" height="59"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH4-rB-nbI">
+                                        <rect key="frame" x="87" y="111" width="61.5" height="63.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="55"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLw-wv-vQE">
+                                        <rect key="frame" x="148.5" y="115" width="20.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouU-br-axv">
+                                        <rect key="frame" x="186" y="111" width="61.5" height="63.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="55"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nR2-cN-igw">
+                                        <rect key="frame" x="247.5" y="115" width="20.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -156,33 +224,6 @@
                                             <constraint firstItem="PF7-fd-Yo9" firstAttribute="top" secondItem="oq4-YG-RzU" secondAttribute="top" id="nWx-Pg-cAE"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather_cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="O6K-bj-dre" userLabel="weather_icon">
-                                        <rect key="frame" x="152" y="50" width="71" height="59"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLw-wv-vQE">
-                                        <rect key="frame" x="148.5" y="115" width="20.5" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="38" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouU-br-axv">
-                                        <rect key="frame" x="186" y="111" width="61.5" height="63.5"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="55"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nR2-cN-igw">
-                                        <rect key="frame" x="247.5" y="115" width="20.5" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH4-rB-nbI">
-                                        <rect key="frame" x="87" y="111" width="61.5" height="63.5"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="55"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -315,6 +356,7 @@
     <resources>
         <image name="address_icon" width="14" height="18"/>
         <image name="air_pressure" width="16" height="14"/>
+        <image name="device_camera" width="82" height="82"/>
         <image name="home-background" width="375" height="220"/>
         <image name="humidity" width="14" height="18"/>
         <image name="weather_cloudy" width="71" height="59"/>
