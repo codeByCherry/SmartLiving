@@ -14,6 +14,7 @@
 		1B52876E2181A42D00A6C7CD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52876D2181A42D00A6C7CD /* HomeViewController.swift */; };
 		1B5287702181A45B00A6C7CD /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52876F2181A45B00A6C7CD /* DeviceModel.swift */; };
 		1B5287752181A7C800A6C7CD /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5287742181A7C800A6C7CD /* DeviceCell.swift */; };
+		1B5287B32182FA3300A6C7CD /* DeviceAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5287B22182FA3300A6C7CD /* DeviceAddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1B52876D2181A42D00A6C7CD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1B52876F2181A45B00A6C7CD /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 		1B5287742181A7C800A6C7CD /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
+		1B5287B22182FA3300A6C7CD /* DeviceAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				1B52876D2181A42D00A6C7CD /* HomeViewController.swift */,
+				1B5287B22182FA3300A6C7CD /* DeviceAddViewController.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5287B32182FA3300A6C7CD /* DeviceAddViewController.swift in Sources */,
 				1B5287702181A45B00A6C7CD /* DeviceModel.swift in Sources */,
 				1B528739217F151B00A6C7CD /* AppDelegate.swift in Sources */,
 				1B52876E2181A42D00A6C7CD /* HomeViewController.swift in Sources */,
