@@ -37,19 +37,19 @@ class DeviceAddViewController: UIViewController,  UITableViewDataSource, UITable
     func setupDevices() {
         
         let camera = DeviceModel()
-        camera.deviceName = "camera1"
+        camera.deviceName = "香薰钟"
         camera.deviceImageName = "device_camera"
-        camera.deviceDesc = "这是一个个性十足的网络神奇"
+        camera.deviceDesc = "这是一个网络神奇"
         
         let camera2 = DeviceModel()
-        camera2.deviceName = "camera2"
+        camera2.deviceName = "音乐闹钟CP100"
         camera2.deviceImageName = "device_camera"
-        camera2.deviceDesc = "这是一个个性十足的网络神奇"
+        camera2.deviceDesc = "这是一个网络神奇"
         
         let camera3 = DeviceModel()
-        camera3.deviceName = "camera3"
+        camera3.deviceName = "WRM500"
         camera3.deviceImageName = "device_camera"
-        camera3.deviceDesc = "这是一个个性十足的网络神奇"
+        camera3.deviceDesc = "这是一个网络神奇"
         
         devices.append(camera)
         devices.append(camera2)
@@ -86,6 +86,12 @@ class DeviceAddViewController: UIViewController,  UITableViewDataSource, UITable
         
     }
     
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+      
+        return 1
+        
+    }
 
 
 }
