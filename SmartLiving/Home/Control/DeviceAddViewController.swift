@@ -1,8 +1,8 @@
 //
-//  HomeViewController.swift
+//  DeviceAddViewController.swift
 //  SmartLiving
 //
-//  Created by Tony Zhang on 2018/10/25.
+//  Created by Tony Zhang on 2018/10/26.
 //  Copyright © 2018年 SSM. All rights reserved.
 //
 
@@ -10,40 +10,31 @@ import UIKit
 
 
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DeviceAddViewController: UIViewController,  UITableViewDataSource, UITableViewDelegate{
 
     
-    @IBOutlet weak var deviceTableView: UITableView!
+    
+    @IBOutlet weak var deviceTable: UITableView!
     
     
     var devices = [DeviceModel]()
     
     
+    
     override func viewDidLoad() {
-
+        
         super.viewDidLoad()
         
-        deviceTableView.rowHeight = 102
+        deviceTable.rowHeight = 102
         
-        self.loadDevices()
+        self.setupDevices()
+        
 
     }
     
     
-    
-    // MARK:- Add new Device
-    
-    @IBAction func addDevicePressed(_ sender: Any) {
-        
-        // TODO:: 增加逻辑判断-用户是否已经登录。
-        performSegue(withIdentifier: "addDeviceSegue", sender: sender)
-        
-    }
-    
-    
-    
-    // TODO:: 从数据库中读取添加的设备信息
-    func loadDevices() {
+    // 配置用户可以添加的设备列表
+    func setupDevices() {
         
         let camera = DeviceModel()
         camera.deviceName = "camera1"
@@ -66,7 +57,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-    //MARK:- TableView
+    
+    // MARK:- TableView Datasource and delegate
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -93,5 +86,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+
 
 }

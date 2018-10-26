@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--设备-->
+        <!--首页-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="SmartLiving" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="首页" customClass="HomeViewController" customModule="SmartLiving" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,17 +296,82 @@
             </objects>
             <point key="canvasLocation" x="1693.5999999999999" y="-673.31334332833592"/>
         </scene>
-        <!--设备-->
+        <!--增加设备-->
         <scene sceneID="5zH-fX-2qf">
             <objects>
-                <viewController title="设备" id="853-3y-sX3" sceneMemberID="viewController">
+                <viewController title="设备" id="853-3y-sX3" userLabel="增加设备" customClass="DeviceAddViewController" customModule="SmartLiving" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DjS-6a-sUK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U0i-8L-6pe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="102" id="BUq-CA-8R1" customClass="DeviceCell" customModule="SmartLiving" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="102"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BUq-CA-8R1" id="TGR-Eb-CAD">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="101.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="device_camera" translatesAutoresizingMaskIntoConstraints="NO" id="asI-M3-fkb">
+                                                    <rect key="frame" x="15" y="11" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="Lfy-AL-GuG"/>
+                                                        <constraint firstAttribute="width" constant="80" id="cMF-h1-sdr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络收音机" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2H-Cc-TfG">
+                                                    <rect key="frame" x="100" y="29" width="85" height="24"/>
+                                                    <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="17"/>
+                                                    <color key="textColor" red="0.45098039220000002" green="0.38823529410000002" blue="0.42745098040000001" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxF-5x-qOy">
+                                                    <rect key="frame" x="100" y="54.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fxF-5x-qOy" firstAttribute="top" secondItem="j2H-Cc-TfG" secondAttribute="bottom" constant="1.5" id="1vz-SD-any"/>
+                                                <constraint firstItem="fxF-5x-qOy" firstAttribute="leading" secondItem="j2H-Cc-TfG" secondAttribute="leading" id="ITT-x8-dRV"/>
+                                                <constraint firstAttribute="trailing" secondItem="fxF-5x-qOy" secondAttribute="trailing" priority="100" constant="233" id="JKm-As-VZZ"/>
+                                                <constraint firstItem="j2H-Cc-TfG" firstAttribute="leading" secondItem="asI-M3-fkb" secondAttribute="trailing" constant="5" id="PfW-Ux-JHY"/>
+                                                <constraint firstItem="asI-M3-fkb" firstAttribute="centerY" secondItem="TGR-Eb-CAD" secondAttribute="centerY" id="T8L-Oi-JzZ"/>
+                                                <constraint firstItem="asI-M3-fkb" firstAttribute="leading" secondItem="TGR-Eb-CAD" secondAttribute="leadingMargin" id="WYo-BK-6Uk"/>
+                                                <constraint firstAttribute="trailing" secondItem="j2H-Cc-TfG" secondAttribute="trailing" priority="100" constant="190" id="g8t-dq-dDk"/>
+                                                <constraint firstItem="j2H-Cc-TfG" firstAttribute="baseline" secondItem="asI-M3-fkb" secondAttribute="centerY" constant="-4" id="i6O-V1-8XI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="deviceDescLabel" destination="fxF-5x-qOy" id="8oW-VM-UrA"/>
+                                            <outlet property="deviceImageView" destination="asI-M3-fkb" id="ZWM-im-dlj"/>
+                                            <outlet property="deviceNameLabel" destination="j2H-Cc-TfG" id="18u-9a-YQ6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="853-3y-sX3" id="2ht-Uz-EVm"/>
+                                    <outlet property="delegate" destination="853-3y-sX3" id="QKj-MM-7kL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="U0i-8L-6pe" firstAttribute="leading" secondItem="cEd-Xw-cc3" secondAttribute="leading" id="0EZ-Ew-HsW"/>
+                            <constraint firstItem="U0i-8L-6pe" firstAttribute="top" secondItem="cEd-Xw-cc3" secondAttribute="top" id="8HL-ck-TeP"/>
+                            <constraint firstItem="cEd-Xw-cc3" firstAttribute="bottom" secondItem="U0i-8L-6pe" secondAttribute="bottom" id="Ixi-MF-BUa"/>
+                            <constraint firstItem="U0i-8L-6pe" firstAttribute="trailing" secondItem="cEd-Xw-cc3" secondAttribute="trailing" id="e3n-BT-BB8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cEd-Xw-cc3"/>
                     </view>
+                    <connections>
+                        <outlet property="deviceTable" destination="U0i-8L-6pe" id="IJa-hn-aYu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="arF-bU-Bmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
