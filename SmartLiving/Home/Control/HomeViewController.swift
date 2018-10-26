@@ -46,6 +46,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+    
+    // MARK:- Add new Device
+    
+    @IBAction func addDevicePressed(_ sender: Any) {
+        
+        // TODO:: 增加逻辑判断-用户是否已经登录。
+        performSegue(withIdentifier: "addDeviceSegue", sender: sender)
+        
+    }
+    
+    
+    
     //MARK:- TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
