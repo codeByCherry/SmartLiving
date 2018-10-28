@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="294" width="375" height="324"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="102" id="maJ-dX-shs" customClass="DeviceCell" customModule="SmartLiving" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="102" id="maJ-dX-shs" customClass="HomeDeviceCell" customModule="SmartLiving" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="maJ-dX-shs" id="CV8-tw-rjJ">
@@ -67,9 +67,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="deviceDescLabel" destination="pAy-99-MJW" id="kAd-od-Qyc"/>
-                                            <outlet property="deviceImageView" destination="Hbu-gs-D84" id="Ren-Ml-hKJ"/>
-                                            <outlet property="deviceNameLabel" destination="k02-bZ-ioH" id="6WJ-fr-eUo"/>
+                                            <outlet property="deviceDescLabel" destination="pAy-99-MJW" id="2Wh-jM-JV8"/>
+                                            <outlet property="deviceImageView" destination="Hbu-gs-D84" id="CUd-em-7ED"/>
+                                            <outlet property="deviceNameLabel" destination="k02-bZ-ioH" id="Lfp-b3-rtb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -308,7 +308,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="102" id="BUq-CA-8R1" customClass="DeviceCell" customModule="SmartLiving" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="deviceCell" rowHeight="102" id="BUq-CA-8R1" customClass="HomeDeviceCell" customModule="SmartLiving" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BUq-CA-8R1" id="TGR-Eb-CAD">
@@ -347,9 +347,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="deviceDescLabel" destination="fxF-5x-qOy" id="8oW-VM-UrA"/>
-                                            <outlet property="deviceImageView" destination="asI-M3-fkb" id="ZWM-im-dlj"/>
-                                            <outlet property="deviceNameLabel" destination="j2H-Cc-TfG" id="18u-9a-YQ6"/>
+                                            <outlet property="deviceDescLabel" destination="fxF-5x-qOy" id="qTc-ZE-fFZ"/>
+                                            <outlet property="deviceImageView" destination="asI-M3-fkb" id="eS8-6H-39R"/>
+                                            <outlet property="deviceNameLabel" destination="j2H-Cc-TfG" id="ihA-xr-fUv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

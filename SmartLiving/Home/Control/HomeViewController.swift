@@ -76,7 +76,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let deviceCell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath) as! DeviceCell
+        let deviceCell = tableView.dequeueReusableCell(withIdentifier: "deviceCell", for: indexPath) as! HomeDeviceCell
         
         let deviceModel = devices[indexPath.row]
         

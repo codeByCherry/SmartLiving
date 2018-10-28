@@ -11,7 +11,7 @@ import UIKit
 
 
 
-class DeviceCell: UITableViewCell {
+class HomeDeviceCell: UITableViewCell {
 
 
     @IBOutlet weak var deviceImageView: UIImageView!
